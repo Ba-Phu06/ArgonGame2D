@@ -1,0 +1,185 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: rgba(3, 6, 18, 0.82);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-panel {
+  background: #0b132b;
+  border: 1px solid rgba(0, 245, 212, 0.32);
+  border-radius: 18px;
+  padding: 24px;
+  width: min(880px, 95vw);
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.wide-modal {
+  width: min(1020px, 96vw);
+}
+
+.modal-top-bar,
+.modal-footer-row,
+.modal-actions-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.upgrade-cards-grid,
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.upgrade-card,
+.workshop-card,
+.codex-card {
+  background: rgba(15, 25, 54, 0.92);
+  border: 2px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 16px;
+  color: var(--text-main);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.upgrade-card-top,
+.workshop-card-head,
+.codex-card-head,
+.weapon-stat-row,
+.history-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.rarity-tag,
+.bonus-tag,
+.element-badge,
+.key-hint,
+.level-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.upgrade-subtitle {
+  font-size: 0.78rem;
+  color: var(--accent-cyan);
+}
+
+.upgrade-desc,
+.workshop-card p,
+.codex-card p {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.upgrade-cta {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  border-radius: 8px;
+  color: #040814;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.summary-metrics-grid,
+.codex-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+.codex-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.metric-box,
+.history-row,
+.synergy-callout,
+.weapon-breakdown {
+  background: rgba(6, 11, 26, 0.78);
+  border: 1px solid var(--border-subtle);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.metric-box span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.level-pip-bar {
+  display: flex;
+  gap: 4px;
+}
+
+.level-pip {
+  flex: 1;
+  height: 6px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.pip-filled {
+  background: var(--accent-cyan);
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.history-row-main,
+.history-row-stats,
+.codex-stats-mini,
+.summary-pills,
+.shard-balance,
+.tab-switcher {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+}
+
+.outcome-tag {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.tag-win {
+  background: rgba(0, 245, 212, 0.18);
+  color: var(--accent-cyan);
+}
+
+.tag-loss {
+  background: rgba(255, 77, 109, 0.18);
+  color: var(--accent-crimson);
+}
