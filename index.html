@@ -13,6 +13,21 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if (
+        window.location.hostname.indexOf('github.io') !== -1 &&
+        !document.querySelector('link[href*="assets/app.css"]')
+      ) {
+        var css = document.createElement('link');
+        css.rel = 'stylesheet';
+        css.href = './dist/assets/app.css';
+        document.head.appendChild(css);
+        var script = document.createElement('script');
+        script.type = 'module';
+        script.src = './dist/assets/app.js';
+        document.head.appendChild(script);
+      }
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
